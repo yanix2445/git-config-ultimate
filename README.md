@@ -49,35 +49,20 @@ cd ~/git-config-ultimate && ./install.sh
 <div align="center">
 
 ```mermaid
+```mermaid
 flowchart LR
     Home([".gitconfig"])
     Root(["git-config-ultimate/.gitconfig"])
     Local(["core/paths.gitconfig"])
     
-    subgraph Core
-        System["core"]
-        Optim["optimization"]
-        Color["color"]
-        Help["help"]
-    end
-    
-    subgraph Modules
-        User["user"]
-        Delta["delta"]
-        Diff["diff"]
-        Workflow["workflow"]
-        Maint["maintenance"]
-        Creds["credentials"]
-        LFS["lfs"]
-        Url["url"]
-    end
+    Core["⚙️ Core\n(System, Optims)"]
+    Modules["🧩 Modules\n(User, LFS, Delta...)"]
 
     %% Flow
     Home ==>| include | Root
-    Root -.->| include dynamic | Local
-    
     Root --> Core
     Root --> Modules
+    Root -.->| include dynamic | Local
     
     %% Styles
     style Home fill:#f05133,stroke:#fff,color:#fff,stroke-width:2px
@@ -87,7 +72,7 @@ flowchart LR
     style Local fill:#f39c12,stroke:#fff,color:#fff,stroke-width:1px,stroke-dasharray: 5 5
 
     linkStyle 0 stroke:#f05133,stroke-width:3px
-    linkStyle 1 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 3 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
 ```
 
 </div>
