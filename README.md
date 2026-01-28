@@ -30,10 +30,6 @@
 
 ## ⚡ Installation
 
-<table>
-<tr>
-<td>
-
 ```bash
 # 1. Cloner
 git clone https://github.com/yanix2445/git-config-ultimate.git ~/Developer/_Config/git
@@ -42,19 +38,11 @@ git clone https://github.com/yanix2445/git-config-ultimate.git ~/Developer/_Conf
 cd ~/Developer/_Config/git && ./install.sh
 ```
 
-</td>
-<td width="55%">
-
-**L'installateur interactif va :**
-
-- ✅ Configurer votre **Identité** (User, Email)
-- ✅ Activer la **Signature SSH** (Badge Verified)
-- ✅ Générer les **Chemins Locaux** (Paths)
-- ✅ Lier le tout proprement (`include`)
-
-</td>
-</tr>
-</table>
+> **L'installateur interactif va :**
+> - ✅ Configurer votre **Identité** (User, Email)
+> - ✅ Activer la **Signature SSH** (Badge Verified)
+> - ✅ Générer les **Chemins Locaux** (Paths)
+> - ✅ Lier le tout proprement (`include`)
 
 <br/>
 
@@ -103,10 +91,6 @@ cd ~/Developer/_Config/git && ./install.sh
 
 <div align="center">
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
 ### 🚀 Performance & Sécurité
 
 | Feature | Impact |
@@ -116,9 +100,6 @@ cd ~/Developer/_Config/git && ./install.sh
 | **SSH Signing** | Commits signés (Verified) |
 | **SSH Force** | Fini HTTPS, vive SSH |
 
-</td>
-<td width="50%" valign="top">
-
 ### 🎨 Confort & Visuel
 
 | Feature | Impact |
@@ -127,10 +108,6 @@ cd ~/Developer/_Config/git && ./install.sh
 | **Delta** | Diffs syntaxiques magnifiques |
 | **Auto-Stash** | Pull/Rebase sans perte |
 | **Sort** | Branches triées par date |
-
-</td>
-</tr>
-</table>
 
 </div>
 
