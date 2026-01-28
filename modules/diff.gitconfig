@@ -1,0 +1,53 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                             DIFF & ANALYSE                                   ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Options avancées pour la visualisation des changements (Diff, Blame).       ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[diff]
+    # Algorithme histogram : Le plus intelligent pour le code
+    algorithm = histogram
+    
+    # Détection des déplacements de code (pas juste ajout/suppression)
+    colorMoved = zebra
+    colorMovedWS = ignore-all-space
+    
+    # Mnémoniques pour les diffs (a/b deviennent i/w pour index/worktree)
+    mnemonicPrefix = true
+    
+    # Détection des renommages (même s'ils sont un peu différents)
+    renames = true
+    
+    # Affichage compact pour les submodules
+    submodule = log
+
+[blame]
+    # Ignorer les changements d'espace pour le blame (évite de blâmer l'indentation)
+    ignoreWhitespace = true
+    
+    # Affiche la date relative
+    date = relative
+    
+    # Détecte les mouvements de lignes dans le même fichier
+    colorRepeatedLines = true
+    
+    # Détecte les copies depuis d'autres fichiers
+    colorLines = true
+
+[grep]
+    # Affiche les numéros de ligne
+    lineNumber = true
+    
+    # Recherche étendue (Perl Regex)
+    patternType = perl
+    
+    # Groupe les résultats par fichier
+    heading = true
+    break = true
+    
+    # Couleurs
+    color = auto
+
+[apply]
+    # Supprime les espaces en fin de ligne lors de l'application de patchs
+    whitespace = fix

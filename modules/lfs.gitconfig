@@ -1,0 +1,12 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                        LARGE FILE STORAGE (LFS)                              ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Configuration pour gérer les gros fichiers (images, psd, mp4...).           ║
+# ║  Requis pour que 'git lfs' fonctionne automatiquement.                       ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true

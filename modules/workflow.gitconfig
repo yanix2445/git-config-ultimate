@@ -1,0 +1,58 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                            WORKFLOW AUTOMATION                               ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Options pour automatiser les tâches répétitives (stash, remote, rebase).    ║
+# ║  Rend Git plus "intelligent" sur vos intentions.                             ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[init]
+    # Branche par défaut moderne (plus inclusif que master)
+    defaultBranch = main
+
+[push]
+    # Configure automatiquement l'upstream si la branche n'existe pas sur le remote
+    # (Plus besoin de taper --set-upstream origin ma-branche)
+    autoSetupRemote = true
+    
+    # Comportement de push par défaut
+    default = simple
+    
+    # Push les tags automatiquement s'ils pointent vers des commits qu'on push
+    followTags = true
+
+[fetch]
+    # Nettoie les branches/tags supprimés sur le serveur
+    prune = true
+    pruneTags = true
+    
+    # Télécharge tout (branches + tags)
+    all = true
+
+[pull]
+    # Rebase par défaut (garde l'historique linéaire, évite les merges spaghetti)
+    rebase = true
+
+[rebase]
+    # Stash automatique des modifs non commitées avant rebase
+    autoStash = true
+    
+    # Met à jour les références des branches dépendantes (Stacked Branches - Git 2.38+)
+    updateRefs = true
+    
+    # Affiche les stats après rebase
+    stat = true
+
+[merge]
+    # Stash automatique avant merge
+    autoStash = true
+    
+    # Affiche le résumé des conflits
+    conflictStyle = zdiff3
+
+[branch]
+    # Trie les branches par date de dernier commit (le plus utile)
+    sort = -committerdate
+
+[tag]
+    # Trie les tags par version (v1.10 après v1.2)
+    sort = version:refname

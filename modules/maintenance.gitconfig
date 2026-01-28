@@ -1,0 +1,18 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                              AUTO MAINTENANCE                                ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Laisse Git gérer son propre nettoyage en arrière-plan.                      ║
+# ║  Plus besoin de lancer 'git gc' manuellement.                                ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[maintenance]
+    # Active la maintenance automatique
+    auto = true
+    # Stratégie incrémentale (travaille par petits bouts pour ne pas bloquer)
+    strategy = incremental
+
+[gc]
+    # Écrit le graph de commit pendant le Garbage Collection
+    writeCommitGraph = true
+    # Détache le processus pour rendre la main tout de suite
+    autoDetach = true

@@ -1,0 +1,24 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                           DELTA (BETTER DIFFS)                               ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Configuration pour l'outil 'git-delta' qui embellit les diffs.              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true      # Utiliser n/N pour naviguer entre les diffs
+    light = false        # Mode sombre (false) ou clair (true)
+    line-numbers = true  # Afficher les numéros de ligne
+    side-by-side = false # Vue côte à côte (mettre à true si tu préfères)
+    
+[diff]
+    colorMoved = default
+
+[merge]
+    # Zdiff3 : Montre Original || Mien || Leur (Le meilleur mode pour résoudre les conflits)
+    conflictstyle = zdiff3
