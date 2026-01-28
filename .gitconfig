@@ -1,0 +1,32 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                             GIT CONFIG LOADER                                ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Ce fichier est le point d'entrée de ta configuration Git.                   ║
+# ║  Il charge dynamiquement tous les modules situés dans 'core' et 'modules'.   ║
+# ║                                                                              ║
+# ║  Note: Les chemins sont relatifs à l'emplacement de ce fichier.              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[include]
+    # ┌─────────────────────────────────────────────────────────────────────────────┐
+    # │ CORE SETTINGS                                                               │
+    # │ Paramètres système, couleurs, aide et optimisations bas niveau.             │
+    # └─────────────────────────────────────────────────────────────────────────────┘
+    path = core/core.gitconfig
+    path = core/color.gitconfig
+    path = core/help.gitconfig
+    path = core/optimization.gitconfig
+
+    # ┌─────────────────────────────────────────────────────────────────────────────┐
+    # │ MODULES FONCTIONNELS                                                        │
+    # │ Fonctionnalités spécifiques (LFS, Credentials, User identity).              │
+    # └─────────────────────────────────────────────────────────────────────────────┘
+    # path = modules/aliases.gitconfig (Désactivé : géré par Zsh)
+    path = modules/workflow.gitconfig
+    path = modules/diff.gitconfig
+    path = modules/user.gitconfig
+    path = modules/delta.gitconfig
+    path = modules/maintenance.gitconfig
+    path = modules/lfs.gitconfig
+    path = modules/credentials.gitconfig
+    path = modules/url.gitconfig
