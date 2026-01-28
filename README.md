@@ -63,10 +63,9 @@ cd ~/Developer/_Config/git && ./install.sh
 <div align="center">
 
 ```mermaid
-flowchart LR
-    %% Nodes
     Home([".gitconfig"])
     Root(["_Config/git/.gitconfig"])
+    Local(["core/paths.gitconfig"])
     
     subgraph Core
         System["core.gitconfig"]
@@ -79,13 +78,11 @@ flowchart LR
         Diff["diff.gitconfig"]
     end
 
-    Local(["core/paths.gitconfig (Généré)"])
-
     %% Flow
-    Home ==>|  include  | Root
-    Root --> Core
-    Root --> Modules
-    Root -.->| include (dynamic) | Local
+    Home ==>| include | Root
+    Root --> System
+    Root --> User
+    Root -.->| include dynamic | Local
     
     %% Styles
     style Home fill:#f05133,stroke:#fff,color:#fff,stroke-width:2px
