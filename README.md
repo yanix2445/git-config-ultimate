@@ -31,28 +31,16 @@
 
 ## ⚡ Installation
 
-<table>
-<tr>
-<td>
-
 ```bash
 git clone https://github.com/yanix2445/git-config-ultimate.git ~/git-config-ultimate
 cd ~/git-config-ultimate && ./install.sh
 ```
 
-</td>
-<td width="40%">
-
-**Setup Automatisé :**
-
-- ✅ **Identité** & Email
-- ✅ **Signature SSH** (GPG)
-- ✅ **Chemins** Portables
-- ✅ **Clean Include**
-
-</td>
-</tr>
-</table>
+> **Setup Automatisé :**
+> *   ✅ **Identité** & Email
+> *   ✅ **Signature SSH** (GPG)
+> *   ✅ **Chemins** Portables
+> *   ✅ **Clean Include**
 
 <br/>
 
