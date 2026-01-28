@@ -130,29 +130,6 @@ flowchart LR
 
 <br/>
 
-## 🛠️ Règles
-
-<div align="center">
-<i>Cette config impose un standard professionnel pour vos commits.</i>
-<br><br>
-
-<table>
-<tr>
-<td>
-
-### 📏 Convention
-
-| Type | Usage |
-|:---|:---|
-| `feat` | Nouvelle fonctionnalité |
-| `fix` | Correction de bug |
-| `docs` | Documentation |
-| `chore` | Maintenance |
-| `refactor` | Amélioration code |
-
-</td>
-<td>
-
 ### 📝 Exemple
 
 ```text
