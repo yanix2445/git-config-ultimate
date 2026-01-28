@@ -72,7 +72,7 @@ ESCAPED_PWD=$(echo "$CONFIG_DIR" | sed 's/\//\\\//g')
 # (Optionnel, ici on suppose qu'on part du clean repo ou que sed gère)
 # On cherche le pattern GIT_CONFIG_DIR
 if grep -q "GIT_CONFIG_DIR" "$TARGET_CORE"; then
-   sed -i.bak "s/GIT_CONFIG_DIR/$ESCAPED_PWD/" "$TARGET_CORE"
+   sed -i.bak "s/GIT_CONFIG_DIR/$ESCAPED_PWD/g" "$TARGET_CORE"
    rm "$TARGET_CORE.bak"
    echo "✅ Chemins absolus injectés dans core.gitconfig"
 else

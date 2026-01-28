@@ -6,10 +6,10 @@
 
 [core]
     # Fichier d'exclusion global
-    excludesfile = core/.gitignore
+    excludesfile = GIT_CONFIG_DIR/core/.gitignore
     
     # Fichier d'attributs global (Optimisation diffs)
-    attributesfile = core/.gitattributes
+    attributesfile = GIT_CONFIG_DIR/core/.gitattributes
 
     # Éditeur par défaut
     editor = nano
@@ -29,4 +29,4 @@
 
 [commit]
     # Template de commit (Professionalisme)
-    template = /Users/yanis/Developer/_Config/git/core/.gitmessage
+    template = GIT_CONFIG_DIR/core/.gitmessage
