@@ -31,27 +31,24 @@
 
 ## ⚡ Installation
 
-<table>
+<table width="100%">
 <tr>
-<td>
+<td width="55%">
 
 ```bash
-# 1. Cloner
 git clone https://github.com/yanix2445/git-config-ultimate.git ~/git-config-ultimate
-
-# 2. Installer
 cd ~/git-config-ultimate && ./install.sh
 ```
 
 </td>
-<td width="55%">
+<td width="45%" valign="middle">
 
-**L'installateur configure tout :**
+### 🚀 Setup Automatisé
 
-- ✅ **Identité** : Nom, Email, User GitHub
-- ✅ **Sécurité** : Signature SSH automatique
-- ✅ **Chemins** : Configuration dynamique
-- ✅ **Lien** : Include propre dans `~/.gitconfig`
+- **Identité** : Nom & Email Git configurés
+- **Sécurité** : Signature SSH (GPG) activée
+- **Chemins** : Configuration dynamique (Portable)
+- **Structure** : Inclusion propre dans `~/.gitconfig`
 
 </td>
 </tr>
