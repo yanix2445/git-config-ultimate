@@ -128,27 +128,6 @@ flowchart LR
 
 </div>
 
-<br/>
-
-### 📝 Exemple
-
-```text
-feat(core): Ajout du module user
-
-- Ajout de user.gitconfig
-- Configuration de la clé SSH
-```
-
-> **Template** : `git commit` ouvre un modèle pré-rempli.
-
-</td>
-</tr>
-</table>
-
-</div>
-
-<br/>
-
 ## 🚨 Dépannage
 
 <div align="center">
