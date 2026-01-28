@@ -32,10 +32,10 @@
 
 ```bash
 # 1. Cloner
-git clone https://github.com/yanix2445/git-config-ultimate.git ~/Developer/_Config/git
+git clone https://github.com/yanix2445/git-config-ultimate.git ~/git-config-ultimate
 
 # 2. Installer
-cd ~/Developer/_Config/git && ./install.sh
+cd ~/git-config-ultimate && ./install.sh
 ```
 
 > **L'installateur interactif va :**
@@ -53,7 +53,7 @@ cd ~/Developer/_Config/git && ./install.sh
 ```mermaid
 flowchart LR
     Home([".gitconfig"])
-    Root(["_Config/git/.gitconfig"])
+    Root(["git-config-ultimate/.gitconfig"])
     Local(["core/paths.gitconfig"])
     
     subgraph Core
