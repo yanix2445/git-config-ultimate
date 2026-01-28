@@ -54,8 +54,8 @@ flowchart LR
     Root(["git-config-ultimate/.gitconfig"])
     Local(["core/paths.gitconfig"])
     
-    Core["⚙️ Core\n(System, Optims)"]
-    Modules["🧩 Modules\n(User, LFS, Delta...)"]
+    Core["⚙️ Core (System, Optims)"]
+    Modules["🧩 Modules (User, LFS, Delta...)"]
 
     %% Flow
     Home ==>| include | Root
