@@ -49,7 +49,6 @@ cd ~/git-config-ultimate && ./install.sh
 <div align="center">
 
 ```mermaid
-```mermaid
 flowchart LR
     Home([".gitconfig"])
     Root(["git-config-ultimate/.gitconfig"])
