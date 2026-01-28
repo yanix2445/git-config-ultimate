@@ -56,28 +56,18 @@ fi
 
 # 2. ADAPTATION DES CHEMINS (TEMPLATE)
 # ------------------------------------------------------------------------------
-# Git a besoin de chemins absolus pour certaine config incluse
-# On remplace GIT_CONFIG_DIR par le chemin réel dans core/core.gitconfig
-echo ""
-echo "🔧 Adaptation des chemins..."
-# On fait une copie de travail pour core.gitconfig si besoin, ou on modifie en place
-# Ici on modifie en place mais de façon idempotente si possible, ou on restaure d'abord
-# Pour simplifier, on assume que le repo contient 'GIT_CONFIG_DIR' placeholder.
-
-# Astuce : On remplace le placeholder. Si l'utilisateur déplace le dossier, il devra relancer install.sh
-TARGET_CORE="$CONFIG_DIR/core/core.gitconfig"
+# On génère core/paths.gitconfig à partir de l'exemple
+TARGET_PATHS="$CONFIG_DIR/core/paths.gitconfig"
 ESCAPED_PWD=$(echo "$CONFIG_DIR" | sed 's/\//\\\//g')
 
-# On restaure le placeholder d'abord si on réinstalle (pour éviter path/path/path)
-# (Optionnel, ici on suppose qu'on part du clean repo ou que sed gère)
-# On cherche le pattern GIT_CONFIG_DIR
-if grep -q "GIT_CONFIG_DIR" "$TARGET_CORE"; then
-   sed -i.bak "s/GIT_CONFIG_DIR/$ESCAPED_PWD/g" "$TARGET_CORE"
-   rm "$TARGET_CORE.bak"
-   echo "✅ Chemins absolus injectés dans core.gitconfig"
-else
-   echo "ℹ️  Chemins déjà configurés ou placeholder introuvable."
-fi
+echo "⚙️  Génération de core/paths.gitconfig..."
+cp "$CONFIG_DIR/core/paths.gitconfig.example" "$TARGET_PATHS"
+
+# Remplacement du placeholder
+sed -i.bak "s/GIT_CONFIG_DIR/$ESCAPED_PWD/g" "$TARGET_PATHS"
+rm "$TARGET_PATHS.bak"
+
+echo "✅ Chemins absolus configurés dans core/paths.gitconfig (ignoré par Git)"
 
 
 # 3. LIEN SYMBOLIQUE

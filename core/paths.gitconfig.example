@@ -1,26 +1,18 @@
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                            CORE CONFIGURATION                                ║
+# ║                          PATHS CONFIGURATION (LOCAL)                         ║
 # ╠══════════════════════════════════════════════════════════════════════════════╣
-# ║  Paramètres fondamentaux du système Git.                                     ║
+# ║  Ce fichier est GÉNÉRÉ AUTOMATIQUEMENT par install.sh.                       ║
+# ║  Il contient les chemins absolus spécifiques à VOTRE machine.                ║
+# ║  NE PAS MODIFIER MANUELLEMENT - NE PAS COMMITTER.                            ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
 [core]
-    # Éditeur par défaut
-    editor = nano
+    # Fichier d'exclusion global
+    excludesfile = GIT_CONFIG_DIR/core/.gitignore
     
-    # Politique de gestion des espaces
-    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    
-    # Correction des caractères unicode (spécifique Mac)
-    precomposeunicode = true
-    
-    # Sensibilité à la casse (False sur Mac car APFS est insensible)
-    ignorecase = false
-
-    # Monitor système de fichiers (accélère git status)
-    fsmonitor = true
-    untrackedCache = true
+    # Fichier d'attributs global (Optimisation diffs)
+    attributesfile = GIT_CONFIG_DIR/core/.gitattributes
 
 [commit]
-    # Les options de commit générales
-
+    # Template de commit (Professionalisme)
+    template = GIT_CONFIG_DIR/core/.gitmessage

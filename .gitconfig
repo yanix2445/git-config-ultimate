@@ -8,6 +8,9 @@
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
 [include]
+    # Config Chemins Locaux (Généré, Ignoré)
+    path = core/paths.gitconfig
+
     # ┌─────────────────────────────────────────────────────────────────────────────┐
     # │ CORE SETTINGS                                                               │
     # │ Paramètres système, couleurs, aide et optimisations bas niveau.             │
