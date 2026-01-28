@@ -17,10 +17,11 @@
 | | Section | Description |
 |:---:|:---|:---|
 | ⚡ | [**Installation**](#-installation) | Prêt en 30 secondes |
-| 🏗️ | [**Architecture**](#-architecture) | Structure modulaire |
+| 🏗️ | [**Architecture**](#-architecture) | Structure du projet |
 | ✨ | [**Features**](#-features) | Optimisations activées |
 | 🛠️ | [**Règles**](#-règles) | Convention de commit |
-| 📜 | [**Licence**](#-licence) | Apache 2.0 |
+| � | [**Dépannage**](#-dépannage) | Résoudre les problèmes |
+| �📜 | [**Licence**](#-licence) | Apache 2.0 |
 
 </div>
 
@@ -30,6 +31,10 @@
 
 ## ⚡ Installation
 
+<table>
+<tr>
+<td>
+
 ```bash
 # 1. Cloner
 git clone https://github.com/yanix2445/git-config-ultimate.git ~/git-config-ultimate
@@ -38,11 +43,19 @@ git clone https://github.com/yanix2445/git-config-ultimate.git ~/git-config-ulti
 cd ~/git-config-ultimate && ./install.sh
 ```
 
-> **L'installateur interactif va :**
-> - ✅ Configurer votre **Identité** (User, Email)
-> - ✅ Activer la **Signature SSH** (Badge Verified)
-> - ✅ Générer les **Chemins Locaux** (Paths)
-> - ✅ Lier le tout proprement (`include`)
+</td>
+<td width="55%">
+
+**L'installateur configure tout :**
+
+- ✅ **Identité** : Nom, Email, User GitHub
+- ✅ **Sécurité** : Signature SSH automatique
+- ✅ **Chemins** : Configuration dynamique
+- ✅ **Lien** : Include propre dans `~/.gitconfig`
+
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -96,6 +109,21 @@ flowchart LR
 
 <br/>
 
+<div align="center">
+
+| Fichier | Type | Rôle |
+|:--------|:-----:|:-----|
+| `.gitconfig` | ⛔ | Point d'entrée — **ne pas modifier** |
+| `core/` | ⚙️ | Optimisations bas niveau & système |
+| `modules/` | 🧩 | Fonctionnalités (User, LFS, Delta...) |
+| `paths.gitconfig` | 🔥 | **Généré localement** — ignoré par Git |
+
+</div>
+
+<br/>
+
+<br/>
+
 ## ✨ Features
 
 <div align="center">
@@ -137,22 +165,90 @@ flowchart LR
 
 <div align="center">
 <i>Cette config impose un standard professionnel pour vos commits.</i>
+<br><br>
 
-<br/>
+<table>
+<tr>
+<td>
 
-| Type | Usage | Exemple |
-|:---:|:---|:---|
-| `feat` | Nouvelle fonctionnalité | `feat(core): Ajout du module user` |
-| `fix` | Correction de bug | `fix(install): Correction des chemins` |
-| `docs` | Documentation | `docs(readme): Nouveau design` |
-| `chore` | Maintenance | `chore: Mise à jour des deps` |
-| `refactor` | Amélioration code | `refactor: Nettoyage install.sh` |
+### 📏 Convention
+
+| Type | Usage |
+|:---|:---|
+| `feat` | Nouvelle fonctionnalité |
+| `fix` | Correction de bug |
+| `docs` | Documentation |
+| `chore` | Maintenance |
+| `refactor` | Amélioration code |
+
+</td>
+<td>
+
+### 📝 Exemple
+
+```text
+feat(core): Ajout du module user
+
+- Ajout de user.gitconfig
+- Configuration de la clé SSH
+```
+
+> **Template** : `git commit` ouvre un modèle pré-rempli.
+
+</td>
+</tr>
+</table>
 
 </div>
 
 <br/>
 
-<br/>
+## 🚨 Dépannage
+
+<div align="center">
+
+<table>
+<tr>
+<td width="60%" valign="top">
+
+### ❓ Problèmes Courants
+
+| Symptôme | Solution Rapide |
+|:---|:---|
+| **Signature Failed** | Vérifier clé SSH dans GitHub |
+| **Delta not found** | Installer : `brew install git-delta` |
+| **Slow Status** | `git maintenance start` |
+| **Permission Denied** | Vérifier vos clés SSH |
+
+</td>
+<td width="5%"></td>
+<td width="35%" valign="top">
+
+### ⚡ Actions
+
+**Un souci de chemin ?**
+Relancer l'installateur pour régénérer les chemins locaux.
+
+<br>
+
+```bash
+# Régénération
+./install.sh
+```
+
+<br>
+
+> <span style="color:#f05133">⚠️ <b>Note :</b></span> Cela ne touche pas à vos données, juste à la config.
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<br>
+
+<br>
 
 <div align="center">
 
