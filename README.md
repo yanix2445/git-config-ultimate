@@ -57,21 +57,29 @@ flowchart LR
     Local(["core/paths.gitconfig"])
     
     subgraph Core
-        System["core.gitconfig"]
-        Optim["optimization.gitconfig"]
+        System["core"]
+        Optim["optimization"]
+        Color["color"]
+        Help["help"]
     end
     
     subgraph Modules
-        User["user.gitconfig"]
-        Url["url.gitconfig"]
-        Diff["diff.gitconfig"]
+        User["user"]
+        Delta["delta"]
+        Diff["diff"]
+        Workflow["workflow"]
+        Maint["maintenance"]
+        Creds["credentials"]
+        LFS["lfs"]
+        Url["url"]
     end
 
     %% Flow
     Home ==>| include | Root
-    Root --> System
-    Root --> User
     Root -.->| include dynamic | Local
+    
+    Root --> Core
+    Root --> Modules
     
     %% Styles
     style Home fill:#f05133,stroke:#fff,color:#fff,stroke-width:2px
@@ -81,7 +89,7 @@ flowchart LR
     style Local fill:#f39c12,stroke:#fff,color:#fff,stroke-width:1px,stroke-dasharray: 5 5
 
     linkStyle 0 stroke:#f05133,stroke-width:3px
-    linkStyle 3 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 1 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
 ```
 
 </div>
