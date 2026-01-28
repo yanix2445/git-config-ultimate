@@ -27,8 +27,6 @@
 
 <br/>
 
-<br/>
-
 ## ⚡ Installation
 
 ```bash
@@ -91,8 +89,6 @@ flowchart LR
 
 <br/>
 
-<br/>
-
 ## ✨ Features
 
 <div align="center">
@@ -127,6 +123,8 @@ flowchart LR
 </table>
 
 </div>
+
+<br/>
 
 ## 🚨 Dépannage
 
