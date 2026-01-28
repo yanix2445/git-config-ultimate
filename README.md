@@ -68,6 +68,7 @@ flowchart LR
     Home ==>|  include  | Root
     Root --> Core
     Root --> Modules
+    Root -.->| include (dynamic) | Local(["core/paths.gitconfig (Généré)"])
     
     style Home fill:#f05133,stroke:#fff,color:#fff
     style Root fill:#2c3e50,stroke:#fff,color:#fff
