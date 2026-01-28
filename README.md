@@ -51,6 +51,7 @@ cd ~/Developer/_Config/git && ./install.sh
 <div align="center">
 
 ```mermaid
+flowchart LR
     Home([".gitconfig"])
     Root(["_Config/git/.gitconfig"])
     Local(["core/paths.gitconfig"])
