@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=f05133&height=200&section=header&text=GIT%20CONFIG%20ULTIMATE&fontSize=70&fontColor=ffffff&fontAlignY=40&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=f05133&height=200&section=header&text=GIT%20ULTIMATE&fontSize=80&fontColor=ffffff&fontAlignY=40&animation=fadeIn" width="100%"/>
 
 [![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)](LICENSE)
-[![Os](https://img.shields.io/badge/OS-macOS%20%7C%20Linux-black?style=for-the-badge&logo=apple&logoColor=white)](https://apple.com)
+[![Author](https://img.shields.io/badge/Author-@yanix2445-f05133?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yanix2445)
 
 **Une configuration Git modulaire, sécurisée et ultra-rapide pour les développeurs exigeants.**
 
@@ -20,37 +20,51 @@
 | 🏗️ | [**Architecture**](#-architecture) | Structure modulaire |
 | ✨ | [**Features**](#-features) | Optimisations activées |
 | 🛠️ | [**Règles**](#-règles) | Convention de commit |
+| 📜 | [**Licence**](#-licence) | Apache 2.0 |
 
 </div>
 
 <br/>
 
+<br/>
+
 ## ⚡ Installation
 
-Plus besoin de copier-coller des snippets.
+<table>
+<tr>
+<td>
 
 ```bash
-# 1. Cloner ce dépôt (où vous voulez)
-git clone https://github.com/votre-user/git-config.git ~/Developer/_Config/git
+# 1. Cloner
+git clone https://github.com/yanix2445/git-config-ultimate.git ~/Developer/_Config/git
 
-# 2. Lancer l'installateur
+# 2. Installer
 cd ~/Developer/_Config/git && ./install.sh
 ```
 
+</td>
+<td width="55%">
+
 **L'installateur interactif va :**
-1. Vous demander votre **Identité** (Nom, Email, GitHub User).
-2. Détecter votre clé SSH pour la **Signature automatique**.
-3. Configurer les **chemins absolus** pour les Templates.
-4. Lier proprement `~/.gitconfig` via un `include`.
+
+- ✅ Configurer votre **Identité** (User, Email)
+- ✅ Activer la **Signature SSH** (Badge Verified)
+- ✅ Générer les **Chemins Locaux** (Paths)
+- ✅ Lier le tout proprement (`include`)
+
+</td>
+</tr>
+</table>
 
 <br/>
 
 ## 🏗️ Architecture
 
-Fini le fichier `~/.gitconfig` de 1000 lignes. Tout est rangé.
+<div align="center">
 
 ```mermaid
 flowchart LR
+    %% Nodes
     Home([".gitconfig"])
     Root(["_Config/git/.gitconfig"])
     
@@ -65,49 +79,91 @@ flowchart LR
         Diff["diff.gitconfig"]
     end
 
+    Local(["core/paths.gitconfig (Généré)"])
+
+    %% Flow
     Home ==>|  include  | Root
     Root --> Core
     Root --> Modules
-    Root -.->| include (dynamic) | Local(["core/paths.gitconfig (Généré)"])
+    Root -.->| include (dynamic) | Local
     
-    style Home fill:#f05133,stroke:#fff,color:#fff
-    style Root fill:#2c3e50,stroke:#fff,color:#fff
-    style Core fill:#34495e,stroke:#fff,color:#fff
-    style Modules fill:#34495e,stroke:#fff,color:#fff
+    %% Styles
+    style Home fill:#f05133,stroke:#fff,color:#fff,stroke-width:2px
+    style Root fill:#2c3e50,stroke:#fff,color:#fff,stroke-width:2px
+    style Core fill:#34495e,stroke:#fff,color:#fff,stroke-width:1px
+    style Modules fill:#34495e,stroke:#fff,color:#fff,stroke-width:1px
+    style Local fill:#f39c12,stroke:#fff,color:#fff,stroke-width:1px,stroke-dasharray: 5 5
+
+    linkStyle 0 stroke:#f05133,stroke-width:3px
+    linkStyle 3 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
 ```
 
-<br/>
-
-## ✨ Features (État de l'art)
-
-| Feature | Description | Impact |
-|:---|:---|:---|
-| **Auto-Stash** | `rebase.autostash = true` | Sauvegarde auto avant pull/rebase. Fini les pertes. |
-| **Zdiff3** | `merge.conflictstyle = zdiff3` | Affiche la base commune lors des conflits. Indispensable. |
-| **Moniteur** | `core.fsmonitor = true` | `git status` instantané même sur les gros monorepos. |
-| **Signature** | `commit.gpgsign = true` | Signe tous les commits via SSH (Badge Verified). |
-| **Delta** | `core.pager = delta` | Diffs syntaxiques magnifiques (si installé). |
-| **SSH Force** | `url.insteadOf` | Force l'usage de SSH pour GitHub (fini HTTPS). |
+</div>
 
 <br/>
 
-## 🛠️ Règles & Convention
+## ✨ Features
 
-Cette config force l'utilisation d'un **Template de Commit** professionnel (`git commit` sans argument).
+<div align="center">
 
-### Types Autorisés
-*   `feat` : Nouvelle fonctionnalité
-*   `fix` : Correction de bug
-*   `wip` : Travail en cours
-*   `chore` : Maintenance, dépendances
-*   `refactor` : Amélioration du code sans changer le comportement
-*   `test` : Ajout de tests
-*   `docs` : Documentation
+<table>
+<tr>
+<td width="50%" valign="top">
 
-> **Note :** L'éditeur par défaut est configuré sur `nano` pour la simplicité, mais respecte votre variable `$EDITOR` si définie.
+### 🚀 Performance & Sécurité
+
+| Feature | Impact |
+|:---|:---|
+| **FS Monitor** | `git status` instantané |
+| **Commit Graph** | Logs et Merges ultra-rapides |
+| **SSH Signing** | Commits signés (Verified) |
+| **SSH Force** | Fini HTTPS, vive SSH |
+
+</td>
+<td width="50%" valign="top">
+
+### 🎨 Confort & Visuel
+
+| Feature | Impact |
+|:---|:---|
+| **Zdiff3** | Résolution de conflits intelligente |
+| **Delta** | Diffs syntaxiques magnifiques |
+| **Auto-Stash** | Pull/Rebase sans perte |
+| **Sort** | Branches triées par date |
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<br/>
+
+## 🛠️ Règles
+
+<div align="center">
+<i>Cette config impose un standard professionnel pour vos commits.</i>
+
+<br/>
+
+| Type | Usage | Exemple |
+|:---:|:---|:---|
+| `feat` | Nouvelle fonctionnalité | `feat(core): Ajout du module user` |
+| `fix` | Correction de bug | `fix(install): Correction des chemins` |
+| `docs` | Documentation | `docs(readme): Nouveau design` |
+| `chore` | Maintenance | `chore: Mise à jour des deps` |
+| `refactor` | Amélioration code | `refactor: Nettoyage install.sh` |
+
+</div>
+
+<br/>
 
 <br/>
 
 <div align="center">
-Made with ❤️ for Git Users
+
+<a href="https://github.com/yanix2445">
+<img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=f05133&text=Made%20with%20%F0%9F%94%A5%20by%20@yanix2445&fontSize=20&fontAlign=50&fontAlignY=73&section=footer" width="100%"/>
+</a>
+
 </div>
