@@ -1,0 +1,32 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                            CORE CONFIGURATION                                ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Paramètres fondamentaux du système Git.                                     ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[core]
+    # Fichier d'exclusion global
+    excludesfile = core/.gitignore
+    
+    # Fichier d'attributs global (Optimisation diffs)
+    attributesfile = core/.gitattributes
+
+    # Éditeur par défaut
+    editor = nano
+    
+    # Politique de gestion des espaces
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    
+    # Correction des caractères unicode (spécifique Mac)
+    precomposeunicode = true
+    
+    # Sensibilité à la casse (False sur Mac car APFS est insensible)
+    ignorecase = false
+
+    # Monitor système de fichiers (accélère git status)
+    fsmonitor = true
+    untrackedCache = true
+
+[commit]
+    # Template de commit (Professionalisme)
+    template = /Users/yanis/Developer/_Config/git/core/.gitmessage

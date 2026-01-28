@@ -1,0 +1,30 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                          GLOBAL GITATTRIBUTES                                ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Définit comment Git traite certains fichiers (diffs, merge, linguist).      ║
+# ║  Optimise la fluidité en évitant d'afficher le diff des fichiers lock.       ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ┌─────────────────────────────────────────────────────────────────────────────┐
+# │ DIFF OPTIMIZATION                                                           │
+# └─────────────────────────────────────────────────────────────────────────────┘
+# Ne pas afficher le diff textuel pour les binaires
+*.pbxproj binary
+*.jpg binary
+*.png binary
+*.gif binary
+
+# Traiter les fichiers lock comme binaires (pour éviter les diffs illisibles de 20k lignes)
+# Cela accélère 'git diff' considérablement sur les gros projets JS/Rust
+package-lock.json binary
+yarn.lock binary
+pnpm-lock.yaml binary
+Cargo.lock binary
+go.sum binary
+
+# ┌─────────────────────────────────────────────────────────────────────────────┐
+# │ LINGUIST (GitHub Stats)                                                     │
+# └─────────────────────────────────────────────────────────────────────────────┘
+# Ne pas compter ces fichiers dans les stats de langage
+*.min.js linguist-generated
+*.min.css linguist-generated

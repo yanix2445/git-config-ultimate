@@ -1,0 +1,61 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                          PERFORMANCE & OPTIMISATION                          ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Réglages bas niveau pour la vitesse (Index, Packfiles, Garbage Co).         ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[core]
+    # Monitor de système de fichiers (évite de rescanner tout le disque)
+    # Indispensable sur macOs pour les gros repos
+    fsmonitor = true
+    
+    # Cache les fichiers non trackés (accélère git status)
+    untrackedCache = true
+    
+    # Utilise le commit graph pour accélérer logs et merges
+    commitGraph = true
+    
+    # Optimisation pour les très gros index (split index)
+    # splitIndex = true (Parfois instable, à tester si fsmonitor ne suffit pas)
+
+[pack]
+    # Utilise des threads multiples pour la compression
+    threads = 0
+    
+    # Taille limite fenêtre mémoire (éviter OOM sur gros push)
+    windowMemory = 100m
+    
+    # Créer des index bitmap pour accélérer le clone/fetch
+    writeBitmaps = true
+    
+    # Compression delta
+    compression = 9
+
+[gc]
+    # Écrit le graph de commit pendant le GC
+    writeCommitGraph = true
+    
+    # Détachement auto pour ne pas bloquer le terminal
+    autoDetach = true
+    
+    # Optimisation des packs cruft
+    cruftPacks = true
+
+[fetch]
+    # Écrit le graph de commit lors du fetch
+    writeCommitGraph = true
+    
+    # Téléchargement parallèle des sous-modules
+    parallel = 0
+
+[checkout]
+    # Checkout parallèle (utilise tous les cœurs CPU)
+    workers = 0
+
+[index]
+    # Format d'index v4 (plus compact)
+    version = 4
+    
+[status]
+    # Affiche le submodule summary dans git status
+    submoduleSummary = true

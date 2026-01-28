@@ -1,0 +1,10 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                               HELP & AUTO                                    ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Configuration de l'aide et de la correction automatique.                    ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+[help]
+    # Corrige automatiquement les fautes de frappe (ex: 'gti' -> 'git')
+    # après un court délai (1 = 0.1 seconde)
+    autocorrect = 1

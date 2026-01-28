@@ -1,0 +1,41 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                     MODÈLE DE COMMIT (SOLO DEV - FR)                         ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  RÈGLE D'OR : TOUT EN FRANÇAIS !                                             ║
+# ║  Format : <type>(<domaine>): <sujet court>                                   ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# <type>(<scope>): <sujet court>
+#
+# <Corps détaillé (optionnel) - Pourquoi ? Quoi ?>
+#
+# <Footer (optionnel) - Closes #123, BREAKING CHANGE...>
+
+# ┌─────────────────────────────────────────────────────────────────────────────┐
+# │ TYPES PRINCIPAUX                                                            │
+# └─────────────────────────────────────────────────────────────────────────────┘
+#   feat     : Nouvelle fonctionnalité
+#   fix      : Correction de bug
+#   wip      : Travail en cours (sauvegarde temporaire)
+#   snapshot : Point de sauvegarde (fin de journée/session)
+#   docs     : Documentation uniquement
+#   style    : Formatage, style (pas de changement de code)
+#   refactor : Refactoring (ni fix ni feat)
+#   perf     : Amélioration de performance
+#   test     : Ajout/modif de tests
+#   chore    : Maintenance (build, deps...)
+#   infra    : Infrastructure (Docker, K8s, Terraform)
+#   ci       : Intégration Continue (GitHub Actions)
+#
+# ┌─────────────────────────────────────────────────────────────────────────────┐
+# │ DOMAINES (SCOPES) COMMUNS                                                   │
+# └─────────────────────────────────────────────────────────────────────────────┘
+#   (ui) (api) (db) (auth) (core) (utils) (config) (deps) (readme)
+#
+# ┌─────────────────────────────────────────────────────────────────────────────┐
+# │ EXEMPLES                                                                    │
+# └─────────────────────────────────────────────────────────────────────────────┘
+#   feat(auth): Ajout du système de connexion JWT
+#   fix(api): Correction du endpoint de recherche
+#   wip: Implémentation du dashboard (50%)
+#   docs(readme): Mise à jour des instructions d'installation
