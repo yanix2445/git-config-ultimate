@@ -100,6 +100,10 @@ flowchart LR
 
 <div align="center">
 
+<table>
+<tr>
+<td width="50%" valign="top">
+
 ### 🚀 Performance & Sécurité
 
 | Feature | Impact |
@@ -109,6 +113,9 @@ flowchart LR
 | **SSH Signing** | Commits signés (Verified) |
 | **SSH Force** | Fini HTTPS, vive SSH |
 
+</td>
+<td width="50%" valign="top">
+
 ### 🎨 Confort & Visuel
 
 | Feature | Impact |
@@ -117,6 +124,10 @@ flowchart LR
 | **Delta** | Diffs syntaxiques magnifiques |
 | **Auto-Stash** | Pull/Rebase sans perte |
 | **Sort** | Branches triées par date |
+
+</td>
+</tr>
+</table>
 
 </div>
 
